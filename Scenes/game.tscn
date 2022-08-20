@@ -56,28 +56,27 @@ __meta__ = {
 position = Vector2( 116, 116 )
 frames = SubResource( 5 )
 animation = "brilhinho"
-frame = 5
+frame = 1
 playing = true
 
 [node name="brilhinhoSprite2" type="AnimatedSprite" parent="Fase1"]
 position = Vector2( 173, 124 )
 frames = SubResource( 5 )
 animation = "brilhinho"
-frame = 5
+frame = 1
 playing = true
 
 [node name="brilhinhoSprite3" type="AnimatedSprite" parent="Fase1"]
 position = Vector2( 347, 120 )
 frames = SubResource( 5 )
 animation = "brilhinho"
-frame = 4
 playing = true
 
 [node name="brilhinhoSprite4" type="AnimatedSprite" parent="Fase1"]
 position = Vector2( 509, 112 )
 frames = SubResource( 5 )
 animation = "brilhinho"
-frame = 3
+frame = 5
 playing = true
 
 [node name="player" type="Node2D" parent="."]
@@ -87,7 +86,6 @@ script = ExtResource( 3 )
 [node name="playerSprite" type="AnimatedSprite" parent="player"]
 frames = SubResource( 6 )
 animation = "walk"
-frame = 4
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="player"]
