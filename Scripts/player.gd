@@ -16,9 +16,13 @@ func _process(delta):
 	var dirX = 0
 	
 	if Input.is_action_pressed("ui_right"):
+		if Input.is_action_pressed("ui_accept"):
+			dirX += 1.5
 		dirX += 1
 
 	if Input.is_action_pressed("ui_left"):
+		if Input.is_action_pressed("ui_accept"):
+			dirX += -1.5
 		dirX += -1
 	
 	translate(Vector2(dirX,0) * vel * delta)
