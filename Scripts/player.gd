@@ -47,8 +47,3 @@ func _process(delta):
 		sprite.flip_h = true
 	elif dirX > 0:
 		sprite.flip_h = false
-<<<<<<< HEAD
-
-
-=======
->>>>>>> ad7207e991f11ae53e416eb760b8ae4e9b2c9bd5
