@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Pixel art/Cenário/Fase 1.png" type="Texture" id=1]
 [ext_resource path="res://Pixel art/Idle animation/idle animation M6.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Pixel art/Walking cycle/jam M animacaol3.png" type="Texture" id=8]
 [ext_resource path="res://Pixel art/Walking cycle/jam M animacaol6.png" type="Texture" id=9]
 [ext_resource path="res://Pixel art/Walking cycle/jam M animacaol4.png" type="Texture" id=10]
+[ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Pixel art/Idle animation/idle animation M4.png" type="Texture" id=12]
 [ext_resource path="res://Pixel art/Idle animation/idle animation M5.png" type="Texture" id=13]
 [ext_resource path="res://Pixel art/Animação do brilhinho/brilhinho de interação ani1.png" type="Texture" id=14]
@@ -55,27 +56,28 @@ __meta__ = {
 position = Vector2( 116, 116 )
 frames = SubResource( 5 )
 animation = "brilhinho"
-frame = 1
+frame = 5
 playing = true
 
 [node name="brilhinhoSprite2" type="AnimatedSprite" parent="Fase1"]
 position = Vector2( 173, 124 )
 frames = SubResource( 5 )
 animation = "brilhinho"
-frame = 1
+frame = 5
 playing = true
 
 [node name="brilhinhoSprite3" type="AnimatedSprite" parent="Fase1"]
 position = Vector2( 347, 120 )
 frames = SubResource( 5 )
 animation = "brilhinho"
+frame = 4
 playing = true
 
 [node name="brilhinhoSprite4" type="AnimatedSprite" parent="Fase1"]
 position = Vector2( 509, 112 )
 frames = SubResource( 5 )
 animation = "brilhinho"
-frame = 5
+frame = 3
 playing = true
 
 [node name="player" type="Node2D" parent="."]
@@ -85,11 +87,20 @@ script = ExtResource( 3 )
 [node name="playerSprite" type="AnimatedSprite" parent="player"]
 frames = SubResource( 6 )
 animation = "walk"
+frame = 4
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="player"]
-position = Vector2( 4, -19 )
+position = Vector2( 9, -22 )
+scale = Vector2( 1, 1.06581 )
 current = true
-zoom = Vector2( 0.5, 0.5 )
+zoom = Vector2( 0.25, 0.25 )
 limit_left = 0
 limit_right = 570
+
+[node name="Dialog" parent="." instance=ExtResource( 11 )]
+margin_left = 3.0
+margin_top = 1.0
+margin_right = 3.0
+margin_bottom = 1.0
+timeline = "timeline-1661032343.json"
