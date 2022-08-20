@@ -4,14 +4,9 @@ var vel = 60
 
 onready var sprite = $playerSprite
 
-#onready var camera = $"../Camera2D"
-
 var limit_r = 560
 
 var limit_l = 11
-
-#posição esquerda 11, 131
-#posição direita 570, 131
 
 func _ready():
 	pass 
@@ -27,7 +22,6 @@ func _process(delta):
 		dirX += -1
 	
 	translate(Vector2(dirX,0) * vel * delta)
-	#camera.translate(Vector2(dirX,0) * vel * delta)
 	
 	if global_position.x < limit_l:
 		global_position.x = limit_l
@@ -44,4 +38,15 @@ func _process(delta):
 		sprite.flip_h = true
 	elif dirX > 0:
 		sprite.flip_h = false
-		
+
+#	$brilhinhoSprite.visible = active
+
+#func _input(event):
+	#if get_node_or_null('DialogNode') == null:
+		#if event.is_action_pressed("ui_accept") and active:
+			#get_tree().paused = true
+			#var dialog = Dialogic.start('timeline-1')
+			#dialog.pause_mode = Node.PAUSE_MODE_PROCESS
+			#dialog.connect('timeline_end', self, 'unpause')
+			#add_child(dialog)
+			

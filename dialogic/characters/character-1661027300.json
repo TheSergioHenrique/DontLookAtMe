@@ -1,0 +1,21 @@
+{
+	"color": "#ffb746ad",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1661027300.json",
+	"mirror_portraits": false,
+	"name": "Emmie",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}
