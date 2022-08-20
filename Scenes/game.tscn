@@ -41,6 +41,11 @@ animations = [ {
 "loop": true,
 "name": "walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "run",
+"speed": 25.0
 } ]
 
 [node name="game" type="Node2D"]
@@ -56,27 +61,28 @@ __meta__ = {
 position = Vector2( 116, 116 )
 frames = SubResource( 5 )
 animation = "brilhinho"
-frame = 1
+frame = 3
 playing = true
 
 [node name="brilhinhoSprite2" type="AnimatedSprite" parent="Fase1"]
 position = Vector2( 173, 124 )
 frames = SubResource( 5 )
 animation = "brilhinho"
-frame = 1
+frame = 3
 playing = true
 
 [node name="brilhinhoSprite3" type="AnimatedSprite" parent="Fase1"]
 position = Vector2( 347, 120 )
 frames = SubResource( 5 )
 animation = "brilhinho"
+frame = 2
 playing = true
 
 [node name="brilhinhoSprite4" type="AnimatedSprite" parent="Fase1"]
 position = Vector2( 509, 112 )
 frames = SubResource( 5 )
 animation = "brilhinho"
-frame = 5
+frame = 1
 playing = true
 
 [node name="player" type="Node2D" parent="."]
@@ -84,8 +90,10 @@ position = Vector2( 11, 121 )
 script = ExtResource( 3 )
 
 [node name="playerSprite" type="AnimatedSprite" parent="player"]
+position = Vector2( 2, 0 )
 frames = SubResource( 6 )
-animation = "walk"
+animation = "run"
+frame = 4
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="player"]

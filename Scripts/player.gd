@@ -10,9 +10,10 @@ var limit_l = 11
 
 func _ready():
 	pass 
+	
+var is_runnig = false
 
 func _process(delta):
-	
 	var dirX = 0
 	
 	if Input.is_action_pressed("ui_right"):
@@ -32,9 +33,13 @@ func _process(delta):
 		
 	if global_position.x > limit_r:
 		global_position.x = limit_r
+		
 	
 	if dirX != 0:
-		sprite.animation = "walk"
+		if dirX > 1 or dirX < -1:
+			sprite.animation = "run"
+		else:
+			sprite.animation = "walk"
 	else:
 		sprite.animation = "idle"
 		
@@ -42,5 +47,8 @@ func _process(delta):
 		sprite.flip_h = true
 	elif dirX > 0:
 		sprite.flip_h = false
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ad7207e991f11ae53e416eb760b8ae4e9b2c9bd5
