@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://Scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/interacaobrilho.tscn" type="PackedScene" id=2]
@@ -52,6 +52,8 @@
 [ext_resource path="res://Pixel art/Animação do brilhinho/brilhinho de interação ani3.png" type="Texture" id=50]
 [ext_resource path="res://Scripts/npc.gd" type="Script" id=51]
 [ext_resource path="res://Músicas e FX/whispers.wav" type="AudioStream" id=52]
+[ext_resource path="res://Scripts/interacaobrilhofase2.gd" type="Script" id=53]
+[ext_resource path="res://Músicas e FX/Fases 1 e 2.wav" type="AudioStream" id=54]
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
@@ -135,13 +137,9 @@ __meta__ = {
 position = Vector2( 130, 115 )
 timeline = "predio"
 
-
-[node name="brilhinhoArea3" parent="Fase2" instance=ExtResource( 2 )]
-position = Vector2( 311, 111 )
-timeline = "olhos"
-
 [node name="brilhinhoArea5" parent="Fase2" instance=ExtResource( 2 )]
 position = Vector2( 557, 121 )
+script = ExtResource( 53 )
 timeline = "fase3"
 
 [node name="player" type="Node2D" parent="."]
@@ -157,7 +155,6 @@ __meta__ = {
 position = Vector2( 2, 0 )
 frames = SubResource( 6 )
 animation = "run"
-frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
@@ -187,14 +184,13 @@ shape = SubResource( 13 )
 [node name="npcSprite" type="AnimatedSprite" parent="npcTransform"]
 frames = SubResource( 10 )
 animation = "idle"
-frame = 4
+frame = 2
 playing = true
 
 [node name="npcSprite2" type="AnimatedSprite" parent="npcTransform"]
 position = Vector2( 33, 0 )
 frames = SubResource( 12 )
 animation = "idle"
-frame = 2
 playing = true
 flip_h = true
 
@@ -203,12 +199,18 @@ visible = false
 position = Vector2( 130, 115 )
 frames = SubResource( 5 )
 animation = "brilhinho"
-frame = 5
+frame = 3
 playing = true
 
 [node name="whisper_fase_2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 52 )
-volume_db = -17.0
+volume_db = -20.0
+autoplay = true
+
+[node name="fase2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 54 )
+volume_db = -10.0
+pitch_scale = 0.52
 autoplay = true
 
 [connection signal="area_entered" from="npcTransform" to="npcTransform" method="_on_area_entered"]

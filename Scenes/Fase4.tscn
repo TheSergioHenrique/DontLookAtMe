@@ -1,4 +1,5 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
+
 [ext_resource path="res://Pixel art/Cenários/Fase 4.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/player.gd" type="Script" id=2]
 [ext_resource path="res://Pixel art/Walking cycle/jam M animacaol6.png" type="Texture" id=3]
@@ -16,10 +17,11 @@
 [ext_resource path="res://Pixel art/Monstros/Amalgama.png" type="Texture" id=15]
 [ext_resource path="res://Scripts/Fase.gd" type="Script" id=16]
 [ext_resource path="res://Scenes/interacaobrilho.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Músicas e FX/whispers.wav" type="AudioStream" id=18]
-[ext_resource path="res://Músicas e FX/fases 3-4 sem sussurro.wav" type="AudioStream" id=19]
 [ext_resource path="res://Pixel art/Assets_Fase_3/Monstrão pae.png" type="Texture" id=18]
 [ext_resource path="res://Scripts/EnemyRunnerFase4.gd" type="Script" id=19]
+[ext_resource path="res://Músicas e FX/whispers.wav" type="AudioStream" id=20]
+[ext_resource path="res://Músicas e FX/fases 3-4 sem sussurro.wav" type="AudioStream" id=21]
+
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 10, 84.8182 )
 
@@ -178,12 +180,14 @@ scale = Vector2( 1, 0.71875 )
 texture = ExtResource( 15 )
 
 [node name="ost_4" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 19 )
+stream = ExtResource( 21 )
 volume_db = -10.0
+pitch_scale = 0.52
 autoplay = true
 
 [node name="whisper_4" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 18 )
+stream = ExtResource( 20 )
 volume_db = -10.0
 autoplay = true
+
 [connection signal="area_entered" from="Fase4/EnemyRunner/enemyTrigger" to="Fase4/EnemyRunner" method="_on_enemyTrigger_area_entered"]

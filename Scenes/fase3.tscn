@@ -108,6 +108,7 @@ limit_r = 410
 position = Vector2( 2, 0 )
 frames = SubResource( 6 )
 animation = "run"
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
@@ -123,7 +124,7 @@ limit_left = 0
 limit_right = 420
 
 [node name="brilhinhoArea" parent="." instance=ExtResource( 17 )]
-position = Vector2( 405, 125 )
+position = Vector2( 403, 59 )
 timeline = "fase4"
 
 [node name="fase3_4_ost" type="AudioStreamPlayer" parent="."]
@@ -133,7 +134,7 @@ autoplay = true
 
 [node name="whisper_fase_3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 21 )
-volume_db = -20.0
+volume_db = -15.0
 autoplay = true
 
 [connection signal="area_entered" from="Fase3_BG/EnemyRunner/enemyTrigger" to="Fase3_BG/EnemyRunner" method="_on_enemyTrigger_area_entered"]
