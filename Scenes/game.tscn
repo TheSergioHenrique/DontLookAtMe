@@ -93,7 +93,7 @@ script = ExtResource( 3 )
 position = Vector2( 2, 0 )
 frames = SubResource( 6 )
 animation = "run"
-frame = 4
+frame = 1
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="player"]
