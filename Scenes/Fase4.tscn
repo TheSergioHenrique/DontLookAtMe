@@ -24,15 +24,15 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "run",
-"speed": 25.0
-}, {
 "frames": [ ExtResource( 11 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "run",
+"speed": 25.0
 } ]
 
 [sub_resource type="CircleShape2D" id=2]
@@ -62,7 +62,7 @@ limit_r = 700
 position = Vector2( 2, 0 )
 frames = SubResource( 1 )
 animation = "run"
-frame = 1
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
@@ -101,7 +101,6 @@ flip_v = true
 
 [node name="Amalgama9" type="Sprite" parent="."]
 position = Vector2( 431, 148 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 15 )
 flip_v = true
 

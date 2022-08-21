@@ -30,3 +30,4 @@ func _dialogue():
 func _unpause(name):
 	yield(get_tree().create_timer(0.2), "timeout")
 	get_tree().paused = false
+

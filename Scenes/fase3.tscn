@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/player.gd" type="Script" id=1]
+[ext_resource path="res://Pixel art/Assets_Fase_3/Monstrão pae.png" type="Texture" id=2]
 [ext_resource path="res://Pixel art/Walking cycle/jam M animacaol6.png" type="Texture" id=3]
 [ext_resource path="res://Pixel art/Walking cycle/jam M animacaol2.png" type="Texture" id=4]
 [ext_resource path="res://Pixel art/Walking cycle/jam M animacaol4.png" type="Texture" id=5]
@@ -14,6 +15,12 @@
 [ext_resource path="res://Pixel art/Idle animation/idle animation M5.png" type="Texture" id=13]
 [ext_resource path="res://Pixel art/Idle animation/idle animation M1.png" type="Texture" id=14]
 [ext_resource path="res://Pixel art/Assets_Fase_3/Fase 3.png" type="Texture" id=15]
+[ext_resource path="res://Scripts/EnemyRunner.tres.gd" type="Script" id=16]
+[ext_resource path="res://Scenes/interacaobrilho.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scripts/runnerTrigger.gd" type="Script" id=18]
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 10, 83.6364 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
@@ -47,6 +54,41 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="EnemyRunner" type="Sprite" parent="Fase3_BG"]
+position = Vector2( 41.6667, 80 )
+scale = Vector2( 1.66667, 1.74242 )
+texture = ExtResource( 2 )
+script = ExtResource( 16 )
+
+[node name="RunnerArea2D" type="Area2D" parent="Fase3_BG/EnemyRunner"]
+
+[node name="ColorRect" type="ColorRect" parent="Fase3_BG/EnemyRunner/RunnerArea2D"]
+margin_left = -930.0
+margin_top = -48.0
+margin_right = -30.0
+margin_bottom = 49.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="enemyTrigger" type="Area2D" parent="Fase3_BG/EnemyRunner"]
+position = Vector2( -25, -103.305 )
+scale = Vector2( 0.999998, 1.04348 )
+
+[node name="triggerCol" type="CollisionShape2D" parent="Fase3_BG/EnemyRunner/enemyTrigger"]
+position = Vector2( -5, 99 )
+scale = Vector2( 0.6, 0.55 )
+shape = SubResource( 11 )
+
+[node name="runnerTrigger" type="Area2D" parent="Fase3_BG"]
+position = Vector2( 0, -100 )
+scale = Vector2( 1.66667, 1.81818 )
+script = ExtResource( 18 )
+timeline = "corra"
+
+[node name="runnerCol" type="CollisionShape2D" parent="Fase3_BG/runnerTrigger"]
+position = Vector2( 138, 100 )
+scale = Vector2( 0.6, 0.55 )
+shape = SubResource( 11 )
+
 [node name="player" type="Node2D" parent="."]
 position = Vector2( 11, 121 )
 script = ExtResource( 1 )
@@ -61,7 +103,7 @@ limit_r = 410
 position = Vector2( 2, 0 )
 frames = SubResource( 6 )
 animation = "run"
-frame = 4
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
@@ -75,3 +117,14 @@ current = true
 zoom = Vector2( 0.25, 0.25 )
 limit_left = 0
 limit_right = 420
+
+[node name="brilhinhoArea" parent="." instance=ExtResource( 17 )]
+position = Vector2( 405, 125 )
+scale = Vector2( 1, 1 )
+timeline = "fase4"
+
+[connection signal="area_entered" from="Fase3_BG/EnemyRunner/enemyTrigger" to="Fase3_BG/EnemyRunner" method="_on_enemyTrigger_area_entered"]
+[connection signal="area_entered" from="Fase3_BG/runnerTrigger" to="Fase3_BG/EnemyRunner" method="_on_runnerTrigger_area_entered"]
+[connection signal="area_entered" from="Fase3_BG/runnerTrigger" to="Fase3_BG/runnerTrigger" method="_on_runnerTrigger_area_entered"]
+[connection signal="area_exited" from="Fase3_BG/runnerTrigger" to="Fase3_BG/runnerTrigger" method="_on_runnerTrigger_area_exited"]
+[connection signal="area_entered" from="brilhinhoArea" to="brilhinhoArea" method="_on_brilhinhoArea_area_entered"]
