@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1661027300.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Avançar para a fase 2"
+		},
+		{
+			"change_scene": "res://Scenes/fase2.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1661064057.json",
+		"name": "fase2"
+	}
+}
