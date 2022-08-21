@@ -4,18 +4,18 @@
 			"character": "character-1661027300.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Oi eu sou a Emmie"
+			"text": "Hello World!"
 		},
 		{
 			"character": "character-1661027300.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Após me mudar para cá, começei a me sentir observada por todos"
+			"text": "SALVE!"
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.4",
 		"file": "timeline-1661032343.json",
-		"name": "timeline-1"
+		"name": "hello-world"
 	}
 }
