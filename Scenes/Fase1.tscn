@@ -23,15 +23,15 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "run",
-"speed": 25.0
-}, {
 "frames": [ ExtResource( 11 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "run",
+"speed": 25.0
 } ]
 
 [sub_resource type="CircleShape2D" id=9]
@@ -60,7 +60,7 @@ position = Vector2( 509, 112 )
 
 [node name="brilhinhoArea5" parent="Fase1" instance=ExtResource( 2 )]
 position = Vector2( 557, 121 )
-timeline = "fase4"
+timeline = "fase2"
 
 [node name="player" type="Node2D" parent="."]
 position = Vector2( 11, 121 )
@@ -75,7 +75,6 @@ __meta__ = {
 position = Vector2( 2, 0 )
 frames = SubResource( 6 )
 animation = "run"
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
