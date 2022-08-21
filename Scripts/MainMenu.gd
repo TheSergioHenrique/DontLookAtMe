@@ -21,7 +21,7 @@ func _process(delta):
 
 func handle_selection(_current_selection):
 	if _current_selection == 0:
-		get_tree().change_scene("res://Scenes/game.tscn")
+		get_tree().change_scene("res://Scenes/Fase1.tscn")
 	elif _current_selection == 1:
 		pass
 	elif _current_selection == 2:
@@ -40,7 +40,7 @@ func set_current_selection(_current_selection):
 		selector_three.text = ">"
 
 func _on_StartButton_pressed():
-	get_tree().change_scene("res://Scenes/game.tscn")
+	get_tree().change_scene("res://Scenes/Fase1.tscn")
 
 func _on_HowToPlayButton_pressed():
 	pass

@@ -4,9 +4,9 @@ var vel = 60
 
 onready var sprite = $playerArea/playerSprite
 
-var limit_r = 560
+export var limit_r = 560
 
-var limit_l = 11
+export var limit_l = 11
 
 func _ready():
 	pass 

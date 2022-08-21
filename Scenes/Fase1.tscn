@@ -1,0 +1,91 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Scripts/player.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/interacaobrilho.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Pixel art/Walking cycle/jam M animacaol6.png" type="Texture" id=3]
+[ext_resource path="res://Pixel art/Walking cycle/jam M animacaol2.png" type="Texture" id=4]
+[ext_resource path="res://Pixel art/Walking cycle/jam M animacaol4.png" type="Texture" id=5]
+[ext_resource path="res://Pixel art/Idle animation/idle animation M4.png" type="Texture" id=6]
+[ext_resource path="res://Pixel art/Idle animation/idle animation M3.png" type="Texture" id=7]
+[ext_resource path="res://Pixel art/Idle animation/idle animation M2.png" type="Texture" id=8]
+[ext_resource path="res://Pixel art/Idle animation/idle animation M6.png" type="Texture" id=9]
+[ext_resource path="res://Pixel art/Walking cycle/jam M animacaol3.png" type="Texture" id=10]
+[ext_resource path="res://Pixel art/Walking cycle/jam M animacaol1.png" type="Texture" id=11]
+[ext_resource path="res://Pixel art/Walking cycle/jam M animacaol5.png" type="Texture" id=12]
+[ext_resource path="res://Pixel art/Idle animation/idle animation M5.png" type="Texture" id=13]
+[ext_resource path="res://Pixel art/Idle animation/idle animation M1.png" type="Texture" id=14]
+[ext_resource path="res://Pixel art/Cenário/Fase 1.png" type="Texture" id=15]
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 13 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "run",
+"speed": 25.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=9]
+radius = 11.0
+
+[node name="Fase1" type="Node2D"]
+
+[node name="Fase1" type="Sprite" parent="."]
+texture = ExtResource( 15 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="brilhinhoArea" parent="Fase1" instance=ExtResource( 2 )]
+position = Vector2( 116, 113 )
+
+[node name="brilhinhoArea2" parent="Fase1" instance=ExtResource( 2 )]
+position = Vector2( 173, 124 )
+
+[node name="brilhinhoArea3" parent="Fase1" instance=ExtResource( 2 )]
+position = Vector2( 347, 121 )
+
+[node name="brilhinhoArea4" parent="Fase1" instance=ExtResource( 2 )]
+position = Vector2( 509, 112 )
+
+[node name="brilhinhoArea5" parent="Fase1" instance=ExtResource( 2 )]
+position = Vector2( 557, 121 )
+timeline = "fase4"
+
+[node name="player" type="Node2D" parent="."]
+position = Vector2( 11, 121 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="playerArea" type="Area2D" parent="player"]
+
+[node name="playerSprite" type="AnimatedSprite" parent="player/playerArea"]
+position = Vector2( 2, 0 )
+frames = SubResource( 6 )
+animation = "run"
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
+position = Vector2( 2, 0 )
+shape = SubResource( 9 )
+
+[node name="Camera2D" type="Camera2D" parent="player/playerArea"]
+position = Vector2( 9, -22 )
+scale = Vector2( 1, 1.06581 )
+current = true
+zoom = Vector2( 0.25, 0.25 )
+limit_left = 0
+limit_right = 570

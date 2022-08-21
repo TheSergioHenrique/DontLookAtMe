@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1661027300.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Mudar para a 4"
+		},
+		{
+			"change_scene": "res://Scenes/Fase4.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1661055241.json",
+		"name": "fase4"
+	}
+}

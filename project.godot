@@ -81,7 +81,7 @@ _global_script_class_icons={
 [application]
 
 config/name="placeholder"
-run/main_scene="res://Scenes/game.tscn"
+run/main_scene="res://Scenes/MainMenu.tscn"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
