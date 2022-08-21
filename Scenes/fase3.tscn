@@ -103,7 +103,7 @@ limit_r = 410
 position = Vector2( 2, 0 )
 frames = SubResource( 6 )
 animation = "run"
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
@@ -120,7 +120,6 @@ limit_right = 420
 
 [node name="brilhinhoArea" parent="." instance=ExtResource( 17 )]
 position = Vector2( 405, 125 )
-scale = Vector2( 1, 1 )
 timeline = "fase4"
 
 [connection signal="area_entered" from="Fase3_BG/EnemyRunner/enemyTrigger" to="Fase3_BG/EnemyRunner" method="_on_enemyTrigger_area_entered"]

@@ -4,16 +4,12 @@
 			"character": "character-1661027300.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Mudar para a 2"
-		},
-		{
-			"change_scene": "",
-			"event_id": "dialogic_041"
+			"text": "Tem algo estranho..."
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.4",
-		"file": "timeline-1661065187.json",
-		"name": "fase2"
+		"file": "timeline-1661114868.json",
+		"name": "olhos"
 	}
 }

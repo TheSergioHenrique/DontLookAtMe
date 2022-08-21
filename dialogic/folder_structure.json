@@ -5,7 +5,9 @@
 	"folders": {
 		"Characters": {
 			"files": [
-				"character-1661027300.json"
+				"character-1661027300.json",
+				"character-1661116083.json",
+				"character-1661116103.json"
 			],
 			"folders": {
 
@@ -29,7 +31,6 @@
 		},
 		"Themes": {
 			"files": [
-				"default-theme.cfg",
 				"theme-1661032316.cfg"
 			],
 			"folders": {
@@ -42,15 +43,15 @@
 		},
 		"Timelines": {
 			"files": [
-				"timeline-1661032343.json",
-				"timeline-1661055241.json",
-				"timeline-1661065187.json",
-				"timeline-1661099667.json",
-				"timeline-1661109136.json"
-				"timeline-1661064837.json",
-				"timeline-1661094484.json"
 				"timeline-1661059015.json",
-				"timeline-1661064057.json"
+				"timeline-1661064057.json",
+				"timeline-1661064837.json",
+				"timeline-1661099667.json",
+				"timeline-1661109136.json",
+				"timeline-1661094484.json",
+				"timeline-1661114716.json",
+				"timeline-1661114868.json",
+				"timeline-1661055241.json"
 			],
 			"folders": {
 

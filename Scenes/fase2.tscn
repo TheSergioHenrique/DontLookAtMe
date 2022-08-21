@@ -132,13 +132,15 @@ __meta__ = {
 
 [node name="brilhinhoArea" parent="Fase2" instance=ExtResource( 2 )]
 position = Vector2( 130, 115 )
+timeline = "predio"
 
 [node name="brilhinhoArea3" parent="Fase2" instance=ExtResource( 2 )]
 position = Vector2( 311, 111 )
+timeline = "olhos"
 
 [node name="brilhinhoArea5" parent="Fase2" instance=ExtResource( 2 )]
 position = Vector2( 557, 121 )
-timeline = "fase4"
+timeline = "fase3"
 
 [node name="player" type="Node2D" parent="."]
 position = Vector2( 11, 121 )
@@ -153,7 +155,7 @@ __meta__ = {
 position = Vector2( 2, 0 )
 frames = SubResource( 6 )
 animation = "run"
-frame = 4
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
@@ -183,14 +185,13 @@ shape = SubResource( 13 )
 [node name="npcSprite" type="AnimatedSprite" parent="npcTransform"]
 frames = SubResource( 10 )
 animation = "idle"
-frame = 3
+frame = 2
 playing = true
 
 [node name="npcSprite2" type="AnimatedSprite" parent="npcTransform"]
 position = Vector2( 33, 0 )
 frames = SubResource( 12 )
 animation = "idle"
-frame = 1
 playing = true
 flip_h = true
 
@@ -199,7 +200,7 @@ visible = false
 position = Vector2( 130, 115 )
 frames = SubResource( 5 )
 animation = "brilhinho"
-frame = 4
+frame = 3
 playing = true
 
 [connection signal="area_entered" from="npcTransform" to="npcTransform" method="_on_area_entered"]

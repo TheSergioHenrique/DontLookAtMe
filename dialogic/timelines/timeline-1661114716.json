@@ -4,18 +4,18 @@
 			"character": "character-1661027300.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "NÃO IMPLEMENTADO"
+			"text": "Um prédio bem alto..."
 		},
 		{
 			"character": "character-1661027300.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "SALVE!"
+			"text": "O que é aquilo ?"
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.4",
-		"file": "timeline-1661032343.json",
-		"name": "hello-world"
+		"file": "timeline-1661114716.json",
+		"name": "predio"
 	}
 }
