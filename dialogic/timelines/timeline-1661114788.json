@@ -1,0 +1,28 @@
+{
+	"events": [
+		{
+			"character": "character-1661027300.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+<<<<<<< HEAD:dialogic/timelines/timeline-1661114868.json
+			"text": "Tem algo estranho..."
+=======
+			"text": "É por aqui que eu volto para casa."
+		},
+		{
+			"change_scene": "res://Scenes/fase2.tscn",
+			"event_id": "dialogic_041"
+>>>>>>> 174c4ce32cf69fb2c09bde3af36359052f08e4b8:dialogic/timelines/timeline-1661114788.json
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+<<<<<<< HEAD:dialogic/timelines/timeline-1661114868.json
+		"file": "timeline-1661114868.json",
+		"name": "olhos"
+=======
+		"file": "timeline-1661114788.json",
+		"name": "placa"
+>>>>>>> 174c4ce32cf69fb2c09bde3af36359052f08e4b8:dialogic/timelines/timeline-1661114788.json
+	}
+}

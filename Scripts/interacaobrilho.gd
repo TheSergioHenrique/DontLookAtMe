@@ -2,7 +2,7 @@ extends Area2D
 
 var selecteditem = false
 
-export var timeline = "hello-world" 
+export var timeline = "vestido" 
 
 func _ready():
 	pass

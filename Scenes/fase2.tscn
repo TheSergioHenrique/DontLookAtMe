@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://Scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/interacaobrilho.tscn" type="PackedScene" id=2]
@@ -51,6 +51,7 @@
 [ext_resource path="res://Pixel art/Animação do brilhinho/brilhinho de interação ani5.png" type="Texture" id=49]
 [ext_resource path="res://Pixel art/Animação do brilhinho/brilhinho de interação ani3.png" type="Texture" id=50]
 [ext_resource path="res://Scripts/npc.gd" type="Script" id=51]
+[ext_resource path="res://Músicas e FX/whispers.wav" type="AudioStream" id=52]
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
@@ -59,15 +60,15 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "run",
 "speed": 25.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
 } ]
 
 [sub_resource type="CircleShape2D" id=9]
@@ -78,11 +79,6 @@ radius = 42.0
 
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
-"frames": [ ExtResource( 40 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 26 ), ExtResource( 31 ), ExtResource( 22 ) ],
-"loop": false,
-"name": "transform",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 37 ), ExtResource( 35 ), ExtResource( 21 ), ExtResource( 36 ), ExtResource( 39 ), ExtResource( 38 ) ],
 "loop": true,
 "name": "idle",
@@ -92,15 +88,15 @@ animations = [ {
 "loop": true,
 "name": "monstro",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 26 ), ExtResource( 31 ), ExtResource( 22 ) ],
+"loop": false,
+"name": "transform",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=12]
 animations = [ {
-"frames": [ ExtResource( 24 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
-"loop": false,
-"name": "transform",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 25 ), ExtResource( 23 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "idle",
@@ -109,6 +105,11 @@ animations = [ {
 "frames": [ ExtResource( 34 ) ],
 "loop": true,
 "name": "monstro",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
+"loop": false,
+"name": "transform",
 "speed": 5.0
 } ]
 
@@ -134,6 +135,7 @@ __meta__ = {
 position = Vector2( 130, 115 )
 timeline = "predio"
 
+
 [node name="brilhinhoArea3" parent="Fase2" instance=ExtResource( 2 )]
 position = Vector2( 311, 111 )
 timeline = "olhos"
@@ -155,7 +157,7 @@ __meta__ = {
 position = Vector2( 2, 0 )
 frames = SubResource( 6 )
 animation = "run"
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
@@ -192,6 +194,7 @@ playing = true
 position = Vector2( 33, 0 )
 frames = SubResource( 12 )
 animation = "idle"
+frame = 5
 playing = true
 flip_h = true
 
@@ -202,5 +205,10 @@ frames = SubResource( 5 )
 animation = "brilhinho"
 frame = 3
 playing = true
+
+[node name="whisper_fase_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 52 )
+volume_db = -30.0
+autoplay = true
 
 [connection signal="area_entered" from="npcTransform" to="npcTransform" method="_on_area_entered"]

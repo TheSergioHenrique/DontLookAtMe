@@ -4,18 +4,31 @@
 			"character": "character-1661027300.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
+<<<<<<< HEAD:dialogic/timelines/timeline-1661114716.json
 			"text": "Um prédio bem alto..."
+=======
+			"text": "Essa é minha loja de roupas favorita !"
+>>>>>>> 174c4ce32cf69fb2c09bde3af36359052f08e4b8:dialogic/timelines/timeline-1661114744.json
 		},
 		{
 			"character": "character-1661027300.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
+<<<<<<< HEAD:dialogic/timelines/timeline-1661114716.json
 			"text": "O que é aquilo ?"
+=======
+			"text": "Queria comprar esse vestido algum dia."
+>>>>>>> 174c4ce32cf69fb2c09bde3af36359052f08e4b8:dialogic/timelines/timeline-1661114744.json
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.4",
+<<<<<<< HEAD:dialogic/timelines/timeline-1661114716.json
 		"file": "timeline-1661114716.json",
 		"name": "predio"
+=======
+		"file": "timeline-1661114744.json",
+		"name": "vestido"
+>>>>>>> 174c4ce32cf69fb2c09bde3af36359052f08e4b8:dialogic/timelines/timeline-1661114744.json
 	}
 }

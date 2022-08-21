@@ -142,6 +142,17 @@ custom_styles/disabled = SubResource( 14 )
 custom_styles/normal = SubResource( 15 )
 text = "Next"
 
+[node name="TextoCena3" type="Label" parent="TextureRect3"]
+margin_left = 1.0
+margin_top = 249.0
+margin_right = 361.0
+margin_bottom = 364.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Emmie:
+
+\"gasp\""
+
 [node name="TextureRect4" type="TextureRect" parent="."]
 visible = false
 margin_right = 580.0
@@ -170,6 +181,17 @@ custom_styles/disabled = SubResource( 19 )
 custom_styles/normal = SubResource( 20 )
 text = "Next"
 
+[node name="TextoCena4" type="Label" parent="TextureRect4"]
+margin_left = 2.0
+margin_top = 250.0
+margin_right = 362.0
+margin_bottom = 365.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Emmie:
+
+\"Bom dia, Pai.\""
+
 [node name="TextureRect5" type="TextureRect" parent="."]
 visible = false
 margin_right = 580.0
@@ -178,10 +200,10 @@ texture = ExtResource( 1 )
 expand = true
 
 [node name="Button5" type="Button" parent="TextureRect5"]
-margin_left = 423.0
-margin_top = 255.0
-margin_right = 580.0
-margin_bottom = 363.0
+margin_left = 417.0
+margin_top = 308.0
+margin_right = 548.0
+margin_bottom = 352.0
 custom_fonts/font = ExtResource( 7 )
 custom_styles/hover = SubResource( 21 )
 custom_styles/pressed = SubResource( 22 )
@@ -189,6 +211,26 @@ custom_styles/focus = SubResource( 23 )
 custom_styles/disabled = SubResource( 24 )
 custom_styles/normal = SubResource( 25 )
 text = "Voltar ao Menu"
+
+[node name="TextoCena5" type="Label" parent="TextureRect5"]
+margin_left = 52.0
+margin_top = 248.0
+margin_right = 134.0
+margin_bottom = 363.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Pai:
+
+\"Bom Dia...\""
+
+[node name="TextoCena6" type="Label" parent="TextureRect5"]
+margin_left = 451.0
+margin_top = 28.0
+margin_right = 417.0
+margin_bottom = 46.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "FIM DE JOGO"
 
 [connection signal="pressed" from="TextureRect/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="TextureRect2/Button2" to="." method="_on_Button2_pressed"]

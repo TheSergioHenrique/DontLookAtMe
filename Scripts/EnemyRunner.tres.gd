@@ -1,12 +1,11 @@
 extends Sprite
 
 var enemy_vel = 50
-
 export var e_limit_r = 560
-
 export var e_limit_l = 11
-
 var enemyVisible = false
+
+onready var monstrofx = $monstro
 
 func _ready():
 	hide()
@@ -29,6 +28,7 @@ func _process(delta):
 	
 func _on_runnerTrigger_area_entered(area):	
 	if(area.name == "playerArea"):
+		$monstro.play()
 		show()
 		enemyVisible = true 
 		

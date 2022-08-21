@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/monstro.wav-9d38ace9ab513ee05513810d936f660f.sample"
+
+[deps]
+
+source_file="res://Músicas e FX/monstro.wav"
+dest_files=[ "res://.import/monstro.wav-9d38ace9ab513ee05513810d936f660f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
