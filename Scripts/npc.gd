@@ -1,24 +1,16 @@
 extends Area2D
 
-var selecteditem = false
+var active = true
 
 export var timeline = "hello-world" 
 
 func _ready():
 	pass
 
-func _process(delta):
-	if selecteditem == true && Input.is_action_just_pressed("ui_accept"):
+func _on_area_entered(area):
+	if area.name == ("playerArea") and active == true:
 		_dialogue()
 
-func _on_area_entered(area):
-	if area.name == ("playerArea"):
-		selecteditem = true
-
-func _on_area_exited(area):
-	if area.name == ("playerArea"):
-		selecteditem = false
-	
 func _dialogue():
 	if get_node_or_null('DialogNode') == null:
 		var dialogo = Dialogic.start(timeline)
@@ -28,6 +20,10 @@ func _dialogue():
 		get_tree().paused = true
 
 func _unpause(name):
-	yield(get_tree().create_timer(0.2), "timeout")
 	get_tree().paused = false
-
+	$npcSprite.animation = "transform"
+	$npcSprite2.animation = "transform"
+	yield($npcSprite,"animation_finished")
+	$npcSprite.animation = "monstro"
+	$npcSprite2.animation = "monstro"
+	active = false

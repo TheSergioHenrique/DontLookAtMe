@@ -8,17 +8,19 @@ func _ready():
 	pass
 
 func _process(delta):
-	if selecteditem == true && Input.is_action_just_pressed("ui_accept"):
-		_dialogue()
+	pass
 
-func _on_area_entered(area):
+func _on_runnerTrigger_area_entered(area):
 	if area.name == ("playerArea"):
+		print("Entrou")
+		_dialogue()
 		selecteditem = true
 
-func _on_area_exited(area):
+func _on_runnerTrigger_area_exited(area):
 	if area.name == ("playerArea"):
+		print("Saiu")
 		selecteditem = false
-	
+
 func _dialogue():
 	if get_node_or_null('DialogNode') == null:
 		var dialogo = Dialogic.start(timeline)
