@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fases 3-4 sem sussurro.wav-2d8a3022ee237e9e881a4efb4948c570.sample"
+
+[deps]
+
+source_file="res://Músicas e FX/fases 3-4 sem sussurro.wav"
+dest_files=[ "res://.import/fases 3-4 sem sussurro.wav-2d8a3022ee237e9e881a4efb4948c570.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

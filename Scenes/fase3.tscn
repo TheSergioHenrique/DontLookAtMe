@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://Pixel art/Assets_Fase_3/Monstrão pae.png" type="Texture" id=2]
@@ -18,6 +18,9 @@
 [ext_resource path="res://Scripts/EnemyRunner.tres.gd" type="Script" id=16]
 [ext_resource path="res://Scenes/interacaobrilho.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scripts/runnerTrigger.gd" type="Script" id=18]
+[ext_resource path="res://Músicas e FX/monstro.wav" type="AudioStream" id=19]
+[ext_resource path="res://Músicas e FX/fases 3-4 sem sussurro.wav" type="AudioStream" id=20]
+[ext_resource path="res://Músicas e FX/whispers.wav" type="AudioStream" id=21]
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 10, 83.6364 )
@@ -29,15 +32,15 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "run",
 "speed": 25.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
 } ]
 
 [sub_resource type="CircleShape2D" id=9]
@@ -78,6 +81,9 @@ position = Vector2( -5, 99 )
 scale = Vector2( 0.6, 0.55 )
 shape = SubResource( 11 )
 
+[node name="monstro" type="AudioStreamPlayer" parent="Fase3_BG/EnemyRunner"]
+stream = ExtResource( 19 )
+
 [node name="runnerTrigger" type="Area2D" parent="Fase3_BG"]
 position = Vector2( 0, -100 )
 scale = Vector2( 1.66667, 1.81818 )
@@ -103,7 +109,7 @@ limit_r = 410
 position = Vector2( 2, 0 )
 frames = SubResource( 6 )
 animation = "run"
-frame = 2
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
@@ -120,8 +126,17 @@ limit_right = 420
 
 [node name="brilhinhoArea" parent="." instance=ExtResource( 17 )]
 position = Vector2( 405, 125 )
-scale = Vector2( 1, 1 )
 timeline = "fase4"
+
+[node name="fase3_4_ost" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+volume_db = -10.0
+autoplay = true
+
+[node name="whisper_fase_3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
+volume_db = -20.0
+autoplay = true
 
 [connection signal="area_entered" from="Fase3_BG/EnemyRunner/enemyTrigger" to="Fase3_BG/EnemyRunner" method="_on_enemyTrigger_area_entered"]
 [connection signal="area_entered" from="Fase3_BG/runnerTrigger" to="Fase3_BG/EnemyRunner" method="_on_runnerTrigger_area_entered"]
