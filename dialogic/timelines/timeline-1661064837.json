@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1661027300.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "IR PARA FASE 4"
+		},
+		{
+			"change_scene": "res://Scenes/fase4.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1661064837.json",
+		"name": "fase3"
+	}
+}

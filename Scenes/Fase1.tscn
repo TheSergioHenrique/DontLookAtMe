@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/interacaobrilho.tscn" type="PackedScene" id=2]
@@ -15,6 +15,10 @@
 [ext_resource path="res://Pixel art/Idle animation/idle animation M5.png" type="Texture" id=13]
 [ext_resource path="res://Pixel art/Idle animation/idle animation M1.png" type="Texture" id=14]
 [ext_resource path="res://Pixel art/Cenário/Fase 1.png" type="Texture" id=15]
+[ext_resource path="res://Pixel art/lixeiro.png" type="Texture" id=17]
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 9.0
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
@@ -23,15 +27,15 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "run",
-"speed": 25.0
-}, {
 "frames": [ ExtResource( 11 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "run",
+"speed": 25.0
 } ]
 
 [sub_resource type="CircleShape2D" id=9]
@@ -60,7 +64,17 @@ position = Vector2( 509, 112 )
 
 [node name="brilhinhoArea5" parent="Fase1" instance=ExtResource( 2 )]
 position = Vector2( 557, 121 )
-timeline = "fase4"
+timeline = "fase2"
+
+[node name="lixoArea" type="Area2D" parent="Fase1"]
+position = Vector2( 372, 126 )
+
+[node name="Lixeiro" type="Sprite" parent="Fase1/lixoArea"]
+position = Vector2( 0, -2 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fase1/lixoArea"]
+shape = SubResource( 10 )
 
 [node name="player" type="Node2D" parent="."]
 position = Vector2( 11, 121 )
@@ -75,7 +89,9 @@ __meta__ = {
 position = Vector2( 2, 0 )
 frames = SubResource( 6 )
 animation = "run"
-frame = 2
+
+frame = 3
+
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
@@ -89,3 +105,7 @@ current = true
 zoom = Vector2( 0.25, 0.25 )
 limit_left = 0
 limit_right = 570
+
+[connection signal="area_entered" from="Fase1/lixoArea" to="player" method="_on_lixoArea_area_entered"]
+[connection signal="area_exited" from="Fase1/lixoArea" to="player" method="_on_lixoArea_area_exited"]
+[connection signal="area_entered" from="player/playerArea" to="Fase1/lixoArea" method="_on_playerArea_area_entered"]
