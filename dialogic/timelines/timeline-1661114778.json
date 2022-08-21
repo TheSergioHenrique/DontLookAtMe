@@ -4,16 +4,12 @@
 			"character": "character-1661027300.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "IR PARA FASE 3"
-		},
-		{
-			"change_scene": "res://Scenes/fase3.tscn",
-			"event_id": "dialogic_041"
+			"text": "Um olho...."
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.4",
-		"file": "timeline-1661064837.json",
-		"name": "fase3"
+		"file": "timeline-1661114778.json",
+		"name": "olho"
 	}
 }

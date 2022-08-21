@@ -4,16 +4,16 @@
 			"character": "character-1661027300.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Mudar para a 2"
+			"text": "É por aqui que eu volto para casa."
 		},
 		{
-			"change_scene": "",
+			"change_scene": "res://Scenes/fase2.tscn",
 			"event_id": "dialogic_041"
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.4",
-		"file": "timeline-1661065187.json",
-		"name": "fase2"
+		"file": "timeline-1661114788.json",
+		"name": "placa"
 	}
 }

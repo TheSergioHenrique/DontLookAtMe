@@ -4,18 +4,18 @@
 			"character": "character-1661027300.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "NÃO IMPLEMENTADO"
+			"text": "Essa é minha loja de roupas favorita !"
 		},
 		{
 			"character": "character-1661027300.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "SALVE!"
+			"text": "Queria comprar esse vestido algum dia."
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.4",
-		"file": "timeline-1661032343.json",
-		"name": "hello-world"
+		"file": "timeline-1661114744.json",
+		"name": "vestido"
 	}
 }
