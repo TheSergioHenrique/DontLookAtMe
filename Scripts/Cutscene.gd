@@ -13,7 +13,6 @@ func _process(delta):
 func handle_selection(_current_selection):
 	pass
 
-
 func _on_Button_pressed():
 	$TextureRect2.show()
 

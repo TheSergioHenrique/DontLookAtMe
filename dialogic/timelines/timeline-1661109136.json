@@ -1,0 +1,13 @@
+{
+	"events": [
+		{
+			"change_scene": "res://Scenes/Cutscene.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1661109136.json",
+		"name": "cutscene"
+	}
+}

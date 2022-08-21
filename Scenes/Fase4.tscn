@@ -51,6 +51,7 @@ __meta__ = {
 
 [node name="brilhinhoArea" parent="Fase4" instance=ExtResource( 17 )]
 position = Vector2( 338, 35 )
+timeline = "cutscene"
 
 [node name="player" type="Node2D" parent="."]
 position = Vector2( 17, 127 )
@@ -66,6 +67,7 @@ limit_r = 688
 position = Vector2( 2, 0 )
 frames = SubResource( 1 )
 animation = "run"
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]

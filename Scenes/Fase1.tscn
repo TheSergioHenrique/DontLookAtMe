@@ -64,6 +64,7 @@ position = Vector2( 509, 112 )
 
 [node name="brilhinhoArea5" parent="Fase1" instance=ExtResource( 2 )]
 position = Vector2( 557, 121 )
+timeline = "fase4"
 
 [node name="lixoArea" type="Area2D" parent="Fase1"]
 position = Vector2( 372, 126 )
@@ -88,7 +89,7 @@ __meta__ = {
 position = Vector2( 2, 0 )
 frames = SubResource( 6 )
 animation = "run"
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
