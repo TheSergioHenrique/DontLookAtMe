@@ -181,14 +181,14 @@ shape = SubResource( 13 )
 [node name="npcSprite" type="AnimatedSprite" parent="npcTransform"]
 frames = SubResource( 10 )
 animation = "idle"
-frame = 1
+frame = 4
 playing = true
 
 [node name="npcSprite2" type="AnimatedSprite" parent="npcTransform"]
 position = Vector2( 33, 0 )
 frames = SubResource( 12 )
 animation = "idle"
-frame = 5
+frame = 2
 playing = true
 flip_h = true
 
@@ -197,12 +197,12 @@ visible = false
 position = Vector2( 130, 115 )
 frames = SubResource( 5 )
 animation = "brilhinho"
-frame = 2
+frame = 5
 playing = true
 
 [node name="whisper_fase_2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 52 )
-volume_db = -30.0
+volume_db = -17.0
 autoplay = true
 
 [connection signal="area_entered" from="npcTransform" to="npcTransform" method="_on_area_entered"]
