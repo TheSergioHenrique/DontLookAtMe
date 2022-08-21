@@ -133,6 +133,12 @@ __meta__ = {
 
 [node name="brilhinhoArea" parent="Fase2" instance=ExtResource( 2 )]
 position = Vector2( 130, 115 )
+timeline = "predio"
+
+
+[node name="brilhinhoArea3" parent="Fase2" instance=ExtResource( 2 )]
+position = Vector2( 311, 111 )
+timeline = "olhos"
 
 [node name="brilhinhoArea5" parent="Fase2" instance=ExtResource( 2 )]
 position = Vector2( 557, 121 )

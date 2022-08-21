@@ -123,7 +123,7 @@ limit_left = 0
 limit_right = 420
 
 [node name="brilhinhoArea" parent="." instance=ExtResource( 17 )]
-position = Vector2( 406, 61 )
+position = Vector2( 405, 125 )
 timeline = "fase4"
 
 [node name="fase3_4_ost" type="AudioStreamPlayer" parent="."]

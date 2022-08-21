@@ -4,7 +4,7 @@
 			"character": "character-1661027300.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "IR PARA FASE 3"
+			"text": "Não gosto desse caminho..."
 		},
 		{
 			"change_scene": "res://Scenes/fase3.tscn",
