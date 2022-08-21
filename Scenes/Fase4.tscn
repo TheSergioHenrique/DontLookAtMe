@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Pixel art/Cenários/Fase 4.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/player.gd" type="Script" id=2]
@@ -17,6 +17,11 @@
 [ext_resource path="res://Pixel art/Monstros/Amalgama.png" type="Texture" id=15]
 [ext_resource path="res://Scripts/Fase.gd" type="Script" id=16]
 [ext_resource path="res://Scenes/interacaobrilho.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Pixel art/Assets_Fase_3/Monstrão pae.png" type="Texture" id=18]
+[ext_resource path="res://Scripts/EnemyRunnerFase4.gd" type="Script" id=19]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10, 84.8182 )
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -25,15 +30,15 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "run",
 "speed": 25.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
 } ]
 
 [sub_resource type="CircleShape2D" id=2]
@@ -53,6 +58,32 @@ __meta__ = {
 position = Vector2( 338, 35 )
 timeline = "cutscene"
 
+[node name="EnemyRunner" type="Sprite" parent="Fase4"]
+position = Vector2( -450, 25 )
+scale = Vector2( 1.13802, 1.07292 )
+texture = ExtResource( 18 )
+script = ExtResource( 19 )
+e_limit_r = 800
+e_limit_l = -200
+
+[node name="RunnerArea2D" type="Area2D" parent="Fase4/EnemyRunner"]
+
+[node name="ColorRect" type="ColorRect" parent="Fase4/EnemyRunner/RunnerArea2D"]
+margin_left = -560.0
+margin_top = -49.0
+margin_right = -32.0
+margin_bottom = 47.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="enemyTrigger" type="Area2D" parent="Fase4/EnemyRunner"]
+position = Vector2( -25, -103.305 )
+scale = Vector2( 0.999998, 1.04348 )
+
+[node name="triggerCol" type="CollisionShape2D" parent="Fase4/EnemyRunner/enemyTrigger"]
+position = Vector2( -5.03347, 99.0004 )
+scale = Vector2( 0.6, 0.55 )
+shape = SubResource( 3 )
+
 [node name="player" type="Node2D" parent="."]
 position = Vector2( 17, 127 )
 script = ExtResource( 2 )
@@ -67,7 +98,6 @@ limit_r = 688
 position = Vector2( 2, 0 )
 frames = SubResource( 1 )
 animation = "run"
-frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
@@ -105,9 +135,8 @@ texture = ExtResource( 15 )
 flip_v = true
 
 [node name="Amalgama9" type="Sprite" parent="."]
-
-scale = Vector2( 1, 0.9375 )
 position = Vector2( 431, 148 )
+scale = Vector2( 1, 0.9375 )
 texture = ExtResource( 15 )
 flip_v = true
 
@@ -146,3 +175,5 @@ texture = ExtResource( 15 )
 position = Vector2( 703, 64.5 )
 scale = Vector2( 1, 0.71875 )
 texture = ExtResource( 15 )
+
+[connection signal="area_entered" from="Fase4/EnemyRunner/enemyTrigger" to="Fase4/EnemyRunner" method="_on_enemyTrigger_area_entered"]

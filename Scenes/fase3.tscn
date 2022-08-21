@@ -29,15 +29,15 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "run",
 "speed": 25.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
 } ]
 
 [sub_resource type="CircleShape2D" id=9]
@@ -46,12 +46,11 @@ radius = 11.0
 [node name="Fase3" type="Node2D"]
 
 [node name="Fase3_BG" type="Sprite" parent="."]
-position = Vector2( 0, 55 )
 scale = Vector2( 0.6, 0.55 )
 texture = ExtResource( 15 )
 centered = false
 __meta__ = {
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="EnemyRunner" type="Sprite" parent="Fase3_BG"]
@@ -90,7 +89,7 @@ scale = Vector2( 0.6, 0.55 )
 shape = SubResource( 11 )
 
 [node name="player" type="Node2D" parent="."]
-position = Vector2( 11, 121 )
+position = Vector2( 13, 61 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -103,7 +102,7 @@ limit_r = 410
 position = Vector2( 2, 0 )
 frames = SubResource( 6 )
 animation = "run"
-frame = 2
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
@@ -111,16 +110,15 @@ position = Vector2( 2, 0 )
 shape = SubResource( 9 )
 
 [node name="Camera2D" type="Camera2D" parent="player/playerArea"]
-position = Vector2( 9, -22 )
+position = Vector2( 25, -12 )
 scale = Vector2( 1, 1.06581 )
 current = true
-zoom = Vector2( 0.25, 0.25 )
+zoom = Vector2( 0.2, 0.2 )
 limit_left = 0
 limit_right = 420
 
 [node name="brilhinhoArea" parent="." instance=ExtResource( 17 )]
-position = Vector2( 405, 125 )
-scale = Vector2( 1, 1 )
+position = Vector2( 406, 61 )
 timeline = "fase4"
 
 [connection signal="area_entered" from="Fase3_BG/EnemyRunner/enemyTrigger" to="Fase3_BG/EnemyRunner" method="_on_enemyTrigger_area_entered"]

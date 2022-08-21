@@ -1,0 +1,21 @@
+{
+	"events": [
+		{
+			"character": "character-1661027300.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Aqui tem várias coisinhas baratas !"
+		},
+		{
+			"character": "character-1661027300.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Eu sempre compro algo quando passo por aqui"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1661114769.json",
+		"name": "saquinhos"
+	}
+}
