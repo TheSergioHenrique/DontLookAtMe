@@ -100,7 +100,7 @@ limit_r = 688
 position = Vector2( 2, 0 )
 frames = SubResource( 1 )
 animation = "run"
-frame = 2
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
