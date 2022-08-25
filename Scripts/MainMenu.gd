@@ -64,7 +64,6 @@ func _on_HowToPlayButton_mouse_entered():
 	selector_two.text = ">"
 	selector_three.text = ""
 
-
 func _on_QuitButton_mouse_entered():
 	current_selection = 2
 	selector_one.text = ""

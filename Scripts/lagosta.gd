@@ -1,6 +1,6 @@
 extends Node2D
 
-export var timeline = "lobster" 
+"""export var timeline = "lobster" 
 
 func _dialogue():
 	if get_node_or_null('DialogNode') == null:
@@ -12,9 +12,11 @@ func _dialogue():
 		
 func _unpause(name):
 	yield(get_tree().create_timer(0.2), "timeout")
-	get_tree().paused = false
+	get_tree().paused = false"""
 
 func _ready():
-	pass
-func _process(delta):
-	pass
+	yield(get_tree().create_timer(4), "timeout")
+	get_tree().change_scene("res://Scenes/fase1.tscn")
+	$lobsterjumpscare.play()
+#func _process(delta):
+	#pass

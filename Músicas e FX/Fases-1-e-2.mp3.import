@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Fases-1-e-2.mp3-d6f8ddc1ae63d69b76adb78d4de472ed.mp3str"
+
+[deps]
+
+source_file="res://Músicas e FX/Fases-1-e-2.mp3"
+dest_files=[ "res://.import/Fases-1-e-2.mp3-d6f8ddc1ae63d69b76adb78d4de472ed.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

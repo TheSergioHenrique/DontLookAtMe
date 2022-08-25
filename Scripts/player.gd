@@ -54,11 +54,11 @@ func _process(delta):
 	elif dirX > 0:
 		sprite.flip_h = false
 
-func _on_lixoArea_area_entered(area):
+func _on_lixo_area_entered(area):
 	if area.name == ("playerArea"):
 		selecteditem = true
 
-func _on_lixoArea_area_exited(area):
+func _on_lixo_area_exited(area):
 	if area.name == ("playerArea"):
 		selecteditem = false
 
@@ -69,7 +69,7 @@ func _dialogue():
 		dialogo.pause_mode = PAUSE_MODE_PROCESS
 		dialogo.connect("timeline_end", self, "_unpause")
 		get_tree().paused = true
-		
+
 func _unpause(name):
 	yield(get_tree().create_timer(0.2), "timeout")
 	get_tree().paused = false
