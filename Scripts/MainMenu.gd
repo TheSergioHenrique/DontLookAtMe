@@ -7,10 +7,10 @@ onready var selectfx = $menuChoice
 
 var current_selection = 0
 
-
 func _ready():
 	set_current_selection(0)
 	
+# warning-ignore:unused_argument
 func _process(delta):
 	if Input.is_action_just_pressed("ui_down") and current_selection < 2:
 		selectfx.play()
@@ -25,6 +25,7 @@ func _process(delta):
 
 func handle_selection(_current_selection):
 	if _current_selection == 0:
+# warning-ignore:return_value_discarded
 		get_tree().change_scene("res://Scenes/fase1.tscn")
 	elif _current_selection == 1:
 		pass
@@ -44,6 +45,7 @@ func set_current_selection(_current_selection):
 		selector_three.text = ">"
 
 func _on_StartButton_pressed():
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Scenes/fase1.tscn")
 
 func _on_HowToPlayButton_pressed():
