@@ -5,7 +5,8 @@ onready var selector = $VBoxContainer/VBoxContainer/HBoxContainer/Selector
 var current_selection = 0
 
 func _ready():
-	pass
+	yield(get_tree().create_timer(0.2), "timeout")
+	get_tree().paused = false
 	
 func _process(delta):
 	pass
