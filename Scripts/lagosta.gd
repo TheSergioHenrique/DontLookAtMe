@@ -15,8 +15,8 @@ func _unpause(name):
 	get_tree().paused = false"""
 
 func _ready():
-	yield(get_tree().create_timer(4), "timeout")
-	get_tree().change_scene("res://Scenes/fase1.tscn")
 	$lobsterjumpscare.play()
+	yield($lobsterjumpscare, "finished")
+	get_tree().change_scene("res://Scenes/fase1.tscn")
 #func _process(delta):
 	#pass
