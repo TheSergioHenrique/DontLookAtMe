@@ -100,7 +100,7 @@ limit_r = 688
 position = Vector2( 2, 0 )
 frames = SubResource( 1 )
 animation = "run"
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
@@ -180,12 +180,14 @@ scale = Vector2( 1, 0.71875 )
 texture = ExtResource( 15 )
 
 [node name="ost_4" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 21 )
 volume_db = -10.0
 pitch_scale = 0.52
 autoplay = true
 
 [node name="whisper_4" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 20 )
 volume_db = -10.0
 autoplay = true

@@ -108,7 +108,7 @@ limit_r = 410
 position = Vector2( 2, 0 )
 frames = SubResource( 6 )
 animation = "run"
-frame = 2
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
@@ -128,11 +128,13 @@ position = Vector2( 403, 59 )
 timeline = "fase4"
 
 [node name="fase3_4_ost" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 20 )
 volume_db = -10.0
 autoplay = true
 
 [node name="whisper_fase_3" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 21 )
 volume_db = -15.0
 autoplay = true

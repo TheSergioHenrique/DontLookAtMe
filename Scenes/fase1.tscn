@@ -105,7 +105,7 @@ __meta__ = {
 position = Vector2( 2, 0 )
 frames = SubResource( 6 )
 animation = "run"
-frame = 3
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
@@ -121,6 +121,7 @@ limit_left = 0
 limit_right = 570
 
 [node name="fase1" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 20 )
 volume_db = -10.0
 autoplay = true

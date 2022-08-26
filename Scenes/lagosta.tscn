@@ -16,6 +16,7 @@ __meta__ = {
 }
 
 [node name="lobsterjumpscare" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
 position = Vector2( 290, 182 )
 scale = Vector2( 3.625, 3.64 )
 stream = ExtResource( 2 )

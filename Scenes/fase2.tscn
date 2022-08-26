@@ -155,6 +155,7 @@ __meta__ = {
 position = Vector2( 2, 0 )
 frames = SubResource( 6 )
 animation = "run"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerArea"]
@@ -184,13 +185,14 @@ shape = SubResource( 13 )
 [node name="npcSprite" type="AnimatedSprite" parent="npcTransform"]
 frames = SubResource( 10 )
 animation = "idle"
-frame = 2
+frame = 1
 playing = true
 
 [node name="npcSprite2" type="AnimatedSprite" parent="npcTransform"]
 position = Vector2( 33, 0 )
 frames = SubResource( 12 )
 animation = "idle"
+frame = 5
 playing = true
 flip_h = true
 
@@ -199,15 +201,17 @@ visible = false
 position = Vector2( 130, 115 )
 frames = SubResource( 5 )
 animation = "brilhinho"
-frame = 3
+frame = 2
 playing = true
 
 [node name="whisper_fase_2" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 52 )
 volume_db = -20.0
 autoplay = true
 
 [node name="fase2" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 54 )
 volume_db = -10.0
 pitch_scale = 0.52
