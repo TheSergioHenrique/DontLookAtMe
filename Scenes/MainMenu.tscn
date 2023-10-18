@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Pixel art/tittle screen 1080p.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/Chikarego2.tres" type="DynamicFont" id=2]
@@ -14,16 +14,6 @@
 [sub_resource type="StyleBoxTexture" id=4]
 
 [sub_resource type="StyleBoxTexture" id=16]
-
-[sub_resource type="StyleBoxTexture" id=6]
-
-[sub_resource type="StyleBoxTexture" id=7]
-
-[sub_resource type="StyleBoxTexture" id=8]
-
-[sub_resource type="StyleBoxTexture" id=9]
-
-[sub_resource type="StyleBoxTexture" id=10]
 
 [sub_resource type="StyleBoxTexture" id=11]
 
@@ -71,7 +61,7 @@ rect_min_size = Vector2( 0, 20 )
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 43.0
 margin_right = 113.0
-margin_bottom = 96.0
+margin_bottom = 77.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
 margin_right = 113.0
@@ -98,35 +88,10 @@ custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 16 )
 text = "Iniciar"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
 margin_top = 19.0
 margin_right = 113.0
 margin_bottom = 34.0
-
-[node name="Selector" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
-margin_right = 7.0
-margin_bottom = 15.0
-rect_min_size = Vector2( 7, 0 )
-custom_fonts/font = ExtResource( 2 )
-text = ">"
-
-[node name="HowToPlayButton" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
-margin_left = 11.0
-margin_right = 91.0
-margin_bottom = 15.0
-rect_min_size = Vector2( 80, 0 )
-custom_fonts/font = ExtResource( 2 )
-custom_styles/hover = SubResource( 6 )
-custom_styles/pressed = SubResource( 7 )
-custom_styles/focus = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-text = "Como Jogar"
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
-margin_top = 38.0
-margin_right = 113.0
-margin_bottom = 53.0
 
 [node name="Selector" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer3"]
 margin_right = 7.0
@@ -155,7 +120,5 @@ stream = ExtResource( 4 )
 [connection signal="focus_entered" from="VBoxContainer/VBoxContainer/HBoxContainer/StartButton" to="." method="_on_StartButton_focus_entered"]
 [connection signal="mouse_entered" from="VBoxContainer/VBoxContainer/HBoxContainer/StartButton" to="." method="_on_StartButton_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/HBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/VBoxContainer/HBoxContainer2/HowToPlayButton" to="." method="_on_HowToPlayButton_mouse_entered"]
-[connection signal="pressed" from="VBoxContainer/VBoxContainer/HBoxContainer2/HowToPlayButton" to="." method="_on_HowToPlayButton_pressed"]
 [connection signal="mouse_entered" from="VBoxContainer/VBoxContainer/HBoxContainer3/QuitButton" to="." method="_on_QuitButton_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/HBoxContainer3/QuitButton" to="." method="_on_QuitButton_pressed"]

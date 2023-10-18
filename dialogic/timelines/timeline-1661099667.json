@@ -7,7 +7,7 @@
 
 			],
 			"portrait": "",
-			"question": "Você quer olhar o lixo ?"
+			"question": "Você quer olhar o lixo?"
 		},
 		{
 			"choice": "sim",
@@ -23,7 +23,7 @@
 
 			],
 			"portrait": "",
-			"question": "Você tem certeza ?"
+			"question": "Você tem certeza?"
 		},
 		{
 			"choice": "sim",

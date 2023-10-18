@@ -4,37 +4,37 @@
 			"character": "character-1661116083.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Você viu como aquela menina se veste estranho ?"
+			"text": "Julia, Você viu como aquela menina se veste estranho?"
 		},
 		{
 			"character": "character-1661116103.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Eu vi... "
+			"text": "Eu vi..."
 		},
 		{
 			"character": "character-1661116083.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Ela quer chamar atenção , né?"
+			"text": "Ela está querendo chamar atenção assim, né?"
 		},
 		{
 			"character": "character-1661116103.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Sim...ninguém se veste assim."
+			"text": "Pois é... Ninguém se veste dessa forma!"
 		},
 		{
 			"character": "character-1661116083.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "E com bandagens?"
+			"text": "Ainda mais com bandagens?"
 		},
 		{
 			"character": "character-1661116083.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Pfft. Ridículo"
+			"text": "Haha, não é ridículo?!"
 		}
 	],
 	"metadata": {

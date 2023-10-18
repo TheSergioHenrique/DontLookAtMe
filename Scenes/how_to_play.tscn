@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Pixel art/Tela de voltar DLM.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/how_to_play.gd" type="Script" id=2]
+
+[node name="how_to_play" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="TelaDeVoltarDlm" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 7
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 168.0
+margin_top = 265.0
+margin_right = 364.0
+margin_bottom = 318.0
+color = Color( 0.101961, 0.101961, 0.160784, 1 )
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

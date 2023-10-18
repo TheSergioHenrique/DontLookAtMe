@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Stage 5 (Cutscene)/scene 5.png" type="Texture" id=1]
 [ext_resource path="res://Stage 5 (Cutscene)/scene 1.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Stage 5 (Cutscene)/scene 2.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/Cutscene.gd" type="Script" id=6]
 [ext_resource path="res://Fonts/Chikarego2.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Pixel art/Text_Box/TextBox.png" type="Texture" id=8]
 
 [sub_resource type="StyleBoxTexture" id=1]
 
@@ -64,6 +65,7 @@ script = ExtResource( 6 )
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 580.0
 margin_bottom = 364.0
+rect_pivot_offset = Vector2( 438, 284 )
 texture = ExtResource( 2 )
 expand = true
 
@@ -74,6 +76,15 @@ margin_right = 575.0
 margin_bottom = 342.0
 custom_fonts/font = ExtResource( 7 )
 text = ">"
+
+[node name="Button-Box" type="TextureRect" parent="TextureRect"]
+self_modulate = Color( 1, 1, 1, 0.560784 )
+margin_left = 521.0
+margin_top = 318.0
+margin_right = 1001.0
+margin_bottom = 678.0
+rect_scale = Vector2( 0.12, 0.1 )
+texture = ExtResource( 8 )
 
 [node name="Button" type="Button" parent="TextureRect"]
 margin_left = 537.0
@@ -92,6 +103,7 @@ text = "Next"
 visible = false
 margin_right = 580.0
 margin_bottom = 364.0
+rect_pivot_offset = Vector2( 544, 328 )
 texture = ExtResource( 5 )
 expand = true
 
@@ -101,6 +113,15 @@ margin_top = 334.0
 margin_right = 574.0
 margin_bottom = 348.0
 text = ">"
+
+[node name="Button-Box" type="TextureRect" parent="TextureRect2"]
+self_modulate = Color( 1, 1, 1, 0.560784 )
+margin_left = 521.0
+margin_top = 323.0
+margin_right = 1001.0
+margin_bottom = 683.0
+rect_scale = Vector2( 0.12, 0.1 )
+texture = ExtResource( 8 )
 
 [node name="Button2" type="Button" parent="TextureRect2"]
 margin_left = 536.0
@@ -129,6 +150,38 @@ margin_right = 574.0
 margin_bottom = 341.0
 text = ">"
 
+[node name="text-Box" type="TextureRect" parent="TextureRect3"]
+self_modulate = Color( 1, 1, 1, 0.847059 )
+margin_left = 65.0
+margin_top = 100.0
+margin_right = 545.0
+margin_bottom = 460.0
+rect_scale = Vector2( 0.25, 0.18 )
+texture = ExtResource( 8 )
+
+[node name="TextoCena3" type="RichTextLabel" parent="TextureRect3"]
+margin_left = 73.0
+margin_top = 106.0
+margin_right = 177.0
+margin_bottom = 186.0
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+bbcode_text = "[color=#7f00ff]Emmie[/color]
+\"Gasp\"
+ AH!"
+text = "Emmie
+\"Gasp\"
+ AH!"
+
+[node name="Button-Box" type="TextureRect" parent="TextureRect3"]
+self_modulate = Color( 1, 1, 1, 0.560784 )
+margin_left = 521.0
+margin_top = 316.0
+margin_right = 1001.0
+margin_bottom = 676.0
+rect_scale = Vector2( 0.12, 0.1 )
+texture = ExtResource( 8 )
+
 [node name="Button3" type="Button" parent="TextureRect3"]
 margin_left = 535.0
 margin_top = 324.0
@@ -142,21 +195,11 @@ custom_styles/disabled = SubResource( 14 )
 custom_styles/normal = SubResource( 15 )
 text = "Next"
 
-[node name="TextoCena3" type="Label" parent="TextureRect3"]
-margin_left = 1.0
-margin_top = 249.0
-margin_right = 361.0
-margin_bottom = 364.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 7 )
-text = "Emmie:
-
-\"gasp\""
-
 [node name="TextureRect4" type="TextureRect" parent="."]
 visible = false
 margin_right = 580.0
 margin_bottom = 364.0
+rect_pivot_offset = Vector2( 285, 258 )
 texture = ExtResource( 3 )
 expand = true
 
@@ -166,6 +209,38 @@ margin_top = 324.0
 margin_right = 573.0
 margin_bottom = 338.0
 text = ">"
+
+[node name="text-Box" type="TextureRect" parent="TextureRect4"]
+self_modulate = Color( 1, 1, 1, 0.847059 )
+margin_left = 349.0
+margin_top = 47.0
+margin_right = 829.0
+margin_bottom = 407.0
+rect_scale = Vector2( 0.25, 0.18 )
+texture = ExtResource( 8 )
+
+[node name="TextoCena4" type="RichTextLabel" parent="TextureRect4"]
+margin_left = 357.0
+margin_top = 53.0
+margin_right = 461.0
+margin_bottom = 133.0
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+bbcode_text = "[color=#7f00ff]Emmie[/color]
+...
+\"Bom dia, pai..\""
+text = "Emmie
+...
+\"Bom dia, pai..\""
+
+[node name="Button-Box" type="TextureRect" parent="TextureRect4"]
+self_modulate = Color( 0.282353, 0.282353, 0.282353, 0.831373 )
+margin_left = 521.0
+margin_top = 316.0
+margin_right = 1001.0
+margin_bottom = 676.0
+rect_scale = Vector2( 0.12, 0.1 )
+texture = ExtResource( 8 )
 
 [node name="Button4" type="Button" parent="TextureRect4"]
 margin_left = 535.0
@@ -181,47 +256,12 @@ custom_styles/disabled = SubResource( 19 )
 custom_styles/normal = SubResource( 20 )
 text = "Next"
 
-[node name="TextoCena4" type="Label" parent="TextureRect4"]
-margin_left = 2.0
-margin_top = 250.0
-margin_right = 362.0
-margin_bottom = 365.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 7 )
-text = "Emmie:
-
-\"Bom dia, Pai.\""
-
 [node name="TextureRect5" type="TextureRect" parent="."]
 visible = false
 margin_right = 580.0
 margin_bottom = 364.0
 texture = ExtResource( 1 )
 expand = true
-
-[node name="Button5" type="Button" parent="TextureRect5"]
-margin_left = 417.0
-margin_top = 308.0
-margin_right = 548.0
-margin_bottom = 352.0
-custom_fonts/font = ExtResource( 7 )
-custom_styles/hover = SubResource( 21 )
-custom_styles/pressed = SubResource( 22 )
-custom_styles/focus = SubResource( 23 )
-custom_styles/disabled = SubResource( 24 )
-custom_styles/normal = SubResource( 25 )
-text = "Voltar ao Menu"
-
-[node name="TextoCena5" type="Label" parent="TextureRect5"]
-margin_left = 52.0
-margin_top = 248.0
-margin_right = 134.0
-margin_bottom = 363.0
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = ExtResource( 7 )
-text = "Pai:
-
-\"Bom Dia...\""
 
 [node name="TextoCena6" type="Label" parent="TextureRect5"]
 margin_left = 451.0
@@ -232,8 +272,57 @@ custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_fonts/font = ExtResource( 7 )
 text = "FIM DE JOGO"
 
+[node name="text-Box" type="TextureRect" parent="TextureRect5"]
+self_modulate = Color( 1, 1, 1, 0.847059 )
+margin_left = 109.0
+margin_top = 213.0
+margin_right = 589.0
+margin_bottom = 573.0
+rect_scale = Vector2( 0.25, 0.18 )
+texture = ExtResource( 8 )
+
+[node name="TextoCena5" type="RichTextLabel" parent="TextureRect5"]
+margin_left = 117.0
+margin_top = 219.0
+margin_right = 221.0
+margin_bottom = 299.0
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+bbcode_text = "[color=#000000]Pai[/color]
+
+\"Bom Dia...\""
+text = "Pai
+
+\"Bom Dia...\""
+
+[node name="Button-Box" type="TextureRect" parent="TextureRect5"]
+margin_left = 448.0
+margin_top = 311.0
+margin_right = 928.0
+margin_bottom = 671.0
+rect_scale = Vector2( 0.25, 0.1 )
+texture = ExtResource( 8 )
+
+[node name="Button5" type="Button" parent="TextureRect5"]
+margin_left = 444.0
+margin_top = 308.0
+margin_right = 575.0
+margin_bottom = 352.0
+custom_fonts/font = ExtResource( 7 )
+custom_styles/hover = SubResource( 21 )
+custom_styles/pressed = SubResource( 22 )
+custom_styles/focus = SubResource( 23 )
+custom_styles/disabled = SubResource( 24 )
+custom_styles/normal = SubResource( 25 )
+text = "Voltar ao Menu"
+
+[connection signal="ready" from="TextureRect" to="." method="_on_TextureRect_ready"]
 [connection signal="pressed" from="TextureRect/Button" to="." method="_on_Button_pressed"]
+[connection signal="ready" from="TextureRect2" to="." method="_on_TextureRect2_ready"]
 [connection signal="pressed" from="TextureRect2/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="ready" from="TextureRect3" to="." method="_on_TextureRect3_ready"]
 [connection signal="pressed" from="TextureRect3/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="ready" from="TextureRect4" to="." method="_on_TextureRect4_ready"]
 [connection signal="pressed" from="TextureRect4/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="ready" from="TextureRect5" to="." method="_on_TextureRect5_ready"]
 [connection signal="pressed" from="TextureRect5/Button5" to="." method="_on_Button5_pressed"]

@@ -1,7 +1,7 @@
 extends Control
 
 onready var selector_one = $VBoxContainer/VBoxContainer/HBoxContainer/Selector
-onready var selector_two = $VBoxContainer/VBoxContainer/HBoxContainer2/Selector
+#onready var selector_two = $VBoxContainer/VBoxContainer/HBoxContainer2/Selector
 onready var selector_three= $VBoxContainer/VBoxContainer/HBoxContainer3/Selector
 onready var selectfx = $menuChoice
 
@@ -34,19 +34,19 @@ func handle_selection(_current_selection):
 
 func set_current_selection(_current_selection):
 	selector_one.text = ""
-	selector_two.text = ""
+#	selector_two.text = ""
 	selector_three.text = ""
 	
 	if _current_selection == 0:
 		selector_one.text = ">"
 	elif _current_selection == 1:
-		selector_two.text = ">"
-	elif _current_selection == 2:
+#		selector_two.text = ">"
+#	elif _current_selection == 2:
 		selector_three.text = ">"
 
 func _on_StartButton_pressed():
 # warning-ignore:return_value_discarded
-	get_tree().change_scene("res://Scenes/fase1.tscn")
+	get_tree().change_scene("res://Scenes/how_to_play.tscn")
 
 func _on_HowToPlayButton_pressed():
 	pass
@@ -57,17 +57,17 @@ func _on_QuitButton_pressed():
 func _on_StartButton_mouse_entered():
 	current_selection = 0
 	selector_one.text = ">"
-	selector_two.text = ""
+#	selector_two.text = ""
 	selector_three.text = ""
 
 func _on_HowToPlayButton_mouse_entered():
 	current_selection = 1
 	selector_one.text = ""
-	selector_two.text = ">"
+#	selector_two.text = ">"
 	selector_three.text = ""
 
 func _on_QuitButton_mouse_entered():
 	current_selection = 2
 	selector_one.text = ""
-	selector_two.text = ""
+#	selector_two.text = ""
 	selector_three.text = ">"

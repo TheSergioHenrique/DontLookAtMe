@@ -4,7 +4,7 @@
 			"character": "character-1661027300.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Avançar para a fase 2"
+			"text": "Você se apressa um pouco mais..."
 		},
 		{
 			"change_scene": "res://Scenes/fase2.tscn",
